@@ -1,0 +1,243 @@
+/******************** Fonts ********************/
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 200;
+	src: url('SourceHanSansSC-ExtraLight.otf') format('otf');
+}
+
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 300;
+	src: url('SourceHanSansSC-Light.otf') format('otf');
+}
+
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 400;
+	src: url('SourceHanSansSC-Normal.otf') format('otf');
+}
+
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 500;
+	src: url('SourceHanSansSC-Medium.otf') format('otf');
+}
+
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 700;
+	src: url('SourceHanSansSC-Bold.otf') format('otf');
+}
+
+@font-face {
+	font-family: '思源黑体';
+	font-style: normal;
+    font-weight: 900;
+	src: url('SourceHanSansSC-Heavy.otf') format('otf');
+}
+
+/******************** Theme Variables ********************/
+:root {
+    --main-bg-color: #FFFFFF;
+    --main-fg-color: #000000;
+    
+    --title-bg-color: #E0E0E0;
+    --minor-bg-color: #F6F6F6;
+    
+    --theme-bg-color: #8B6CEF;
+    --theme-fg-color: #FFFFFF;
+    --theme-hover-color: #A289F2;
+}
+
+/******************** Global Settings ********************/
+:root {
+    --theme-style: light;
+
+    --main-font-family: '思源黑体';
+    --main-font-size: 100%;
+
+    --tree-font-family: '思源黑体';
+    --tree-font-size: 100%;
+
+    --detail-font-family: '思源黑体';
+    --detail-font-size: 100%;
+    
+    --main-background-color: var(--main-bg-color);
+    --main-text-color: var(--main-fg-color);
+    --main-border-color: var(--theme-bg-color);
+
+    --accented-background-color: var(--minor-bg-color);
+    --more-accented-background-color: var(--title-bg-color);
+
+    --button-background-color: transparent;
+    --button-disabled-background-color: #0000FF;
+    --button-border-color: var(--theme-bg-color);
+    --button-text-color: var(--theme-fg-color);
+    --button-border-radius: 4px; 
+
+    --primary-button-background-color: var(--theme-bg-color);
+    --primary-button-text-color: var(--theme-fg-color);
+    --primary-button-border-color: var(--title-bg-color);
+
+    --muted-text-color: var(--main-fg-color);
+
+    --input-text-color: black;
+    --input-background-color: transparent;
+
+    --hover-item-text-color: var(--theme-fg-color);
+    --hover-item-background-color: var(--theme-bg-color);
+
+    --active-item-text-color: var(--theme-fg-color);
+    --active-item-background-color: var(--theme-bg-color);
+
+    --menu-text-color: black;
+    --menu-background-color: #F6F6F6;
+
+    --modal-background-color: #F6F6F6;
+    --modal-backdrop-color: #F6F6F6;
+
+    --left-pane-background-color: var(--minor-bg-color);
+    --left-pane-text-color: var(--main-fg-color);
+
+    --launcher-pane-background-color: var(--title-bg-color);
+    --launcher-pane-text-color: var(--main-fg-color);
+
+    --launcher-pane-text-size: 100%;
+
+    --active-tab-background-color: var(--theme-bg-color);
+    --active-tab-hover-background-color: var(--theme-hover-color);
+    --active-tab-text-color: var(--theme-fg-color);
+
+    --inactive-tab-background-color: var(--minor-bg-color);
+    --inactive-tab-text-color: var(--main-fg-color);
+
+    --scrollbar-border-color: #F6F6F6;
+    --tooltip-background-color: #F6F6F6;
+    
+    --link-color: var(--theme-bg-color);
+
+    --mermaid-theme: default;
+}
+
+/******************** Tabs ********************/
+.tab-row-widget .note-tab .note-tab-title {
+    text-align: center;
+}
+.tab-row-widget .note-tab .note-tab-wrapper {
+    border-radius: 16px !important;
+}
+
+.tab-row-widget {
+    padding: 4px;
+    height: 64px;
+}
+
+.note-new-tab {
+    margin-left: 6px !important;
+    padding: 0px !important;
+}
+
+.note-tab-close,
+.note-new-tab {
+    color: #666666 !important;
+}
+
+.note-tab-close:hover
+.note-new-tab:hover {
+    color: #000000 !important;
+}
+
+.ribbon-tab-container {
+    color: #000000;
+}
+
+/******************** Note Titles ********************/
+.title-row {
+    margin: 30px 0px 5px 0px;
+}
+.note-title {
+    font-family: 'Crimson Pro';
+    font-size: 280%;
+    font-weight: bold;
+}
+
+/******************** Note Cards ********************/
+.note-list.grid-view .note-book-card {
+    max-height: 320px;
+    background-color: #FFFFFF;
+    border-radius: 4px !important;
+    border: 1px solid #DDDDDD !important;
+    padding: 16px;
+    margin: 4px;
+}
+
+.grid-view .note-book-header .rendered-note-attributes {
+    font-size: 0.5em !important;
+    font-weight: normal !important;
+}
+
+.note-list-container img {
+    width: 100%;
+}
+
+.note-detail-relation-map {
+    height: 100%;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.note-detail {
+    padding-top: 20px !important;
+}
+
+/******************** Backlinks ********************/
+.backlinks-ticker {
+    top: 0px !important;
+    border: 1px solid var(--main-border-color) !important;
+    border-radius: 4px !important;
+    text-align: center !important;
+    background: var(--accented-background-color) !important;
+}
+
+.backlinks-items {
+    border: 1px solid var(--main-border-color) !important;
+    border-radius: 4px !important;
+    background: var(--accented-background-color) !important;
+}
+
+.backlinks-count {
+    text-align: center !important;
+}
+
+/******************** Misc ********************/
+.gutter-horizontal {
+    width: 2px !important;
+    background: var(--left-pane-background-color) !important;
+}
+
+.gutter-horizontal:hover {
+    width: 2px !important;
+    background: var(--theme-bg-color) !important;
+}
+
+
+.ck-content p {
+    text-indent: 2em;
+    
+    text-align: justify;
+}
+
+/******************** Zen Mode ********************/
+.zen-mode #left-pane,
+.zen-mode #launcher-pane,
+.zen-mode .tab-row-widget,
+.zen-mode .title-bar-buttons,
+.zen-mode .ribbon-container，
+.zen-mode .title-row .button-widget {
+    display: none !important;
+}
