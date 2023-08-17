@@ -2,13 +2,6 @@
 @font-face {
 	font-family: '思源黑体';
 	font-style: normal;
-    font-weight: 200;
-	src: url('SourceHanSansSC-ExtraLight.otf') format('otf');
-}
-
-@font-face {
-	font-family: '思源黑体';
-	font-style: normal;
     font-weight: 300;
 	src: url('SourceHanSansSC-Light.otf') format('otf');
 }
@@ -23,22 +16,8 @@
 @font-face {
 	font-family: '思源黑体';
 	font-style: normal;
-    font-weight: 500;
-	src: url('SourceHanSansSC-Medium.otf') format('otf');
-}
-
-@font-face {
-	font-family: '思源黑体';
-	font-style: normal;
     font-weight: 700;
 	src: url('SourceHanSansSC-Bold.otf') format('otf');
-}
-
-@font-face {
-	font-family: '思源黑体';
-	font-style: normal;
-    font-weight: 900;
-	src: url('SourceHanSansSC-Heavy.otf') format('otf');
 }
 
 /******************** Theme Variables ********************/
@@ -52,6 +31,8 @@
     --theme-bg-color: #8B6CEF;
     --theme-fg-color: #FFFFFF;
     --theme-hover-color: #A289F2;
+    
+    --select-bg-color: #F4EEFE;
 }
 
 /******************** Global Settings ********************/
@@ -75,9 +56,9 @@
     --more-accented-background-color: var(--title-bg-color);
 
     --button-background-color: transparent;
-    --button-disabled-background-color: #0000FF;
+    --button-disabled-background-color: var(--title-bg-color);
     --button-border-color: var(--theme-bg-color);
-    --button-text-color: var(--theme-fg-color);
+    --button-text-color: var(--main-fg-color);
     --button-border-radius: 4px; 
 
     --primary-button-background-color: var(--theme-bg-color);
@@ -124,6 +105,10 @@
     --mermaid-theme: default;
 }
 
+::selection {
+    background: var(--select-bg-color);
+}
+
 /******************** Tabs ********************/
 .tab-row-widget .note-tab .note-tab-title {
     text-align: center;
@@ -166,6 +151,12 @@
     font-weight: bold;
 }
 
+.note-new-tab:hover,
+.note-tab-close:hover {
+    color: var(--main-fg-color) !important;
+    background: transparent !important;
+}
+
 /******************** Note Cards ********************/
 .note-list.grid-view .note-book-card {
     max-height: 320px;
@@ -176,6 +167,26 @@
     margin: 4px;
 }
 
+.note-book-card .note-book-title {
+    font-weight: bold;
+}
+
+.note-book-card .ck-content > * {
+    font-size: medium !important;
+}
+
+.note-book-card .ck-content > h2 {
+    font-size: x-large !important;
+}
+
+.note-book-card .ck-content > h3 {
+    font-size: large !important;
+}
+
+.note-book-card .ck-content > h4 h5 {
+    font-size: medium !important;
+}
+
 .grid-view .note-book-header .rendered-note-attributes {
     font-size: 0.5em !important;
     font-weight: normal !important;
@@ -183,6 +194,10 @@
 
 .note-list-container img {
     width: 100%;
+}
+
+.note-list-container .note-tooltip-title {
+    font-size: 60%;
 }
 
 .note-detail-relation-map {
@@ -215,6 +230,10 @@
 }
 
 /******************** Misc ********************/
+.tree .fancytree-custom-icon {
+    padding-top: 4px;
+}
+
 .gutter-horizontal {
     width: 2px !important;
     background: var(--left-pane-background-color) !important;
@@ -225,11 +244,34 @@
     background: var(--theme-bg-color) !important;
 }
 
+.tooltip-inner {
+    box-shadow: none !important;
+}
+
+/******************** CKEditor ********************/
+.ck-content {
+    line-height: 2em !important;
+}
+
+.ck-content h2 {
+    font-weight: bold;
+}
 
 .ck-content p {
     text-indent: 2em;
-    
     text-align: justify;
+}
+
+.ck-content a > * {
+    color: var(--theme-bg-color) !important;
+    background: transparent !important;
+    text-decoration: none !important;
+}
+
+.ck-content a:hover, .ck-content a span:hover {
+    text-decoration: none !important;
+    cursor: pointer !important;
+    background: var(--minor-bg-color) !important;
 }
 
 /******************** Zen Mode ********************/
