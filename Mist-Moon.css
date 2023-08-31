@@ -1,23 +1,44 @@
 /******************** Fonts ********************/
 @font-face {
-	font-family: '思源黑体';
+    font-family: '思源黑体';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://xxx/SourceHanSansSC-Light.otf') format('otf');
+}
+
+@font-face {
+    font-family: '思源黑体';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://xxx/SourceHanSansSC-Normal.otf') format('otf');
+}
+
+@font-face {
+    font-family: '思源黑体';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://xxx/SourceHanSansSC-Bold.otf') format('otf');
+}
+
+@font-face {
+	font-family: 'LXGW-WenKai';
 	font-style: normal;
     font-weight: 300;
-	src: url('SourceHanSansSC-Light.otf') format('otf');
-}
+	src: url('https://xxx/fonts/LXGWWenKaiLite-Light.ttf') format('truetype');
+    }
 
 @font-face {
-	font-family: '思源黑体';
-	font-style: normal;
+	font-family: 'LXGW-WenKai';
+    font-style: normal;
     font-weight: 400;
-	src: url('SourceHanSansSC-Normal.otf') format('otf');
+    src: url('https://xxx/fonts/LXGWWenKaiLite-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: '思源黑体';
-	font-style: normal;
+	font-family: 'LXGW-WenKai';
+    font-style: normal;
     font-weight: 700;
-	src: url('SourceHanSansSC-Bold.otf') format('otf');
+    src: url('https://xxx/fonts/LXGWWenKaiLite-Bold.ttf') format('truetype');
 }
 
 /******************** Theme Variables ********************/
@@ -248,18 +269,42 @@
     box-shadow: none !important;
 }
 
+.tooltip-inner h5 {
+    font-size: 85% !important;
+}
+
+.toc li {
+    white-space: nowrap;
+}
+
+
+/*.reference-link {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}*/
+
 /******************** CKEditor ********************/
 .ck-content {
     line-height: 2em !important;
 }
 
-.ck-content h2 {
+.ck-content h2,
+.ck-content h3 {
     font-weight: bold;
 }
 
 .ck-content p {
     text-indent: 2em;
     text-align: justify;
+}
+
+.ck-content p span {
+    text-indent: 0em;
+}
+
+.ck-content .katex {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 .ck-content a > * {
